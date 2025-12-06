@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import PhoneMockup from "@/components/PhoneMockup";
 
 export default function FeaturesPage() {
   const features = [
@@ -26,6 +27,7 @@ export default function FeaturesPage() {
           />
         </svg>
       ),
+      imageSrc: "/features/beautiful-design.png",
       highlights: [
         "Soft, feminine color palette",
         "Thoughtful typography",
@@ -80,6 +82,7 @@ export default function FeaturesPage() {
           />
         </svg>
       ),
+      imageSrc: "/features/image-generation.png",
       highlights: [
         "High-quality images",
         "Multiple styles",
@@ -107,6 +110,7 @@ export default function FeaturesPage() {
           />
         </svg>
       ),
+      imageSrc: "/features/pin-search.png",
       highlights: [
         "Pin important chats",
         "Full-text search",
@@ -208,17 +212,18 @@ export default function FeaturesPage() {
                     ))}
                   </ul>
                 </div>
-                <div
-                  className={`${
-                    index % 2 === 1 ? "lg:order-1" : ""
-                  } relative`}
-                >
-                  <div className="aspect-square rounded-3xl bg-gradient-to-br from-[var(--rose-light)] to-[var(--cream)] flex items-center justify-center">
-                    <div className="w-32 h-32 rounded-full bg-white/50 flex items-center justify-center text-[var(--rose-dark)] transform scale-150">
-                      {feature.icon}
-                    </div>
+                {(feature as { imageSrc?: string }).imageSrc && (
+                  <div
+                    className={`${
+                      index % 2 === 1 ? "lg:order-1" : ""
+                    } relative flex items-center justify-center`}
+                  >
+                    <PhoneMockup
+                      imageSrc={(feature as { imageSrc?: string }).imageSrc}
+                      alt={`${feature.title} screenshot`}
+                    />
                   </div>
-                </div>
+                )}
               </motion.div>
             ))}
           </div>
