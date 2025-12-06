@@ -36,33 +36,6 @@ export default function FeaturesPage() {
       ],
     },
     {
-      title: "24/7 Availability",
-      description:
-        "Day or night, Tea is always there. Whether it's 3 AM thoughts or a midday break, your AI companion is ready to chat whenever you are.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-10 h-10"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1.5}
-            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
-      highlights: [
-        "No wait times",
-        "Instant responses",
-        "Works offline (coming soon)",
-        "Consistent quality",
-      ],
-    },
-    {
       title: "AI Image Generation",
       description:
         "Bring your imagination to life. Describe what you want to see and watch Tea create stunning, unique images just for you.",
@@ -116,6 +89,33 @@ export default function FeaturesPage() {
         "Full-text search",
         "Organized history",
         "Quick access to favorites",
+      ],
+    },
+    {
+      title: "24/7 Availability",
+      description:
+        "Day or night, Tea is always there. Whether it's 3 AM thoughts or a midday break, your AI companion is ready to chat whenever you are.",
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-10 h-10"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+      ),
+      highlights: [
+        "No wait times",
+        "Instant responses",
+        "Works offline (coming soon)",
+        "Consistent quality",
       ],
     },
   ];
