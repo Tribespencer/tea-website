@@ -11,17 +11,17 @@ export default function SupportPage() {
     {
       question: "How do I get access to Tea?",
       answer:
-        "Tea is currently in beta testing through Apple TestFlight. Join our waitlist on the homepage and we'll send you an invite as spots become available.",
+        "Tea is coming soon! Join our waitlist on the homepage and we'll notify you as soon as it launches on the App Store.",
     },
     {
       question: "Is Tea free to use?",
       answer:
-        "Tea offers both free and premium tiers. The free tier gives you access to basic conversations, while premium unlocks unlimited messaging, image generation, and advanced features.",
+        "Tea offers a free trial so you can experience the app before subscribing. After the trial, a subscription is required to continue using all of Tea's features including conversations, image generation, and more.",
     },
     {
       question: "How do I generate images with Tea?",
       answer:
-        "Simply describe the image you want to create in your conversation. Tea will generate a unique image based on your description. Premium users have unlimited image generation.",
+        "Simply describe the image you want to create in your conversation. Tea will generate a unique image based on your description. Subscribers enjoy unlimited image generation.",
     },
     {
       question: "Are my conversations private?",

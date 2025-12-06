@@ -29,11 +29,27 @@ export default function Home() {
     if (!email) return;
 
     setIsSubmitting(true);
-    // Simulate API call - replace with actual waitlist API
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setEmail("");
+
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitted(true);
+        setEmail("");
+      } else {
+        console.error('Failed to submit to waitlist');
+      }
+    } catch (error) {
+      console.error('Error submitting to waitlist:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const features = [
@@ -181,7 +197,7 @@ export default function Home() {
             >
               <motion.div variants={fadeInUp} className="mb-6">
                 <span className="inline-block px-4 py-2 rounded-full bg-[var(--rose-light)] text-[var(--rose-dark)] text-sm font-medium">
-                  Now in Beta
+                  Coming Soon
                 </span>
               </motion.div>
 
@@ -401,15 +417,15 @@ export default function Home() {
           >
             <div className="mb-8">
               <span className="inline-block px-4 py-2 rounded-full bg-[var(--leaf)]/10 text-[var(--leaf-dark)] text-sm font-medium mb-6">
-                Early Access
+                Coming Soon
               </span>
               <h2 className="text-4xl md:text-5xl font-medium mb-4">
                 Be the first to experience{" "}
                 <span className="gradient-text">Tea</span>
               </h2>
               <p className="text-xl text-[var(--soft-gray)]">
-                Join our waitlist and get exclusive early access to our beta
-                through TestFlight.
+                Be the first to know when Tea launches. We&apos;ll notify you
+                as soon as it&apos;s available.
               </p>
             </div>
 
@@ -441,7 +457,7 @@ export default function Home() {
                   You&apos;re on the list!
                 </h3>
                 <p className="text-[var(--soft-gray)]">
-                  We&apos;ll send you an invite to our TestFlight beta soon.
+                  We&apos;ll notify you as soon as Tea launches!
                 </p>
               </motion.div>
             ) : (
@@ -535,7 +551,7 @@ export default function Home() {
               href="#waitlist"
               className="inline-flex items-center gap-2 bg-[var(--charcoal)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--charcoal)]/90 transition-all hover:-translate-y-1"
             >
-              Get Early Access
+              Get Notified
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-5 h-5"

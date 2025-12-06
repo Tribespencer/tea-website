@@ -204,7 +204,7 @@ export default function AboutPage() {
               href="/#waitlist"
               className="inline-flex items-center gap-2 bg-[var(--charcoal)] text-white px-8 py-4 rounded-full font-medium hover:bg-[var(--charcoal)]/90 transition-all hover:-translate-y-1"
             >
-              Get Early Access
+              Get Notified
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-5 h-5"

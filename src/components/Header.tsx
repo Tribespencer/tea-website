@@ -19,7 +19,6 @@ export default function Header() {
 
   const navLinks = [
     { href: "/features", label: "Features" },
-    { href: "/about", label: "About" },
     { href: "/support", label: "Support" },
     { href: "/contact", label: "Contact" },
   ];
@@ -70,7 +69,7 @@ export default function Header() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link href="/#waitlist" className="btn-primary text-sm">
-              Get Early Access
+              Get Notified
             </Link>
           </div>
 
@@ -140,7 +139,7 @@ export default function Header() {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="btn-primary inline-block mt-4"
                 >
-                  Get Early Access
+                  Get Notified
                 </Link>
               </motion.div>
             </div>

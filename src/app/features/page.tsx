@@ -278,10 +278,10 @@ export default function FeaturesPage() {
               Ready to try <span className="gradient-text">Tea</span>?
             </h2>
             <p className="text-xl text-[var(--soft-gray)] mb-8">
-              Join our beta and be among the first to experience these features.
+              Be the first to know when these features launch.
             </p>
             <Link href="/#waitlist" className="btn-primary">
-              Get Early Access
+              Get Notified
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-5 h-5"
