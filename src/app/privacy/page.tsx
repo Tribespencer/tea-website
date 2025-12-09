@@ -131,7 +131,7 @@ export default function PrivacyPage() {
               <li><strong>Opt-out:</strong> Opt out of certain data processing</li>
             </ul>
             <p>
-              To exercise these rights, please contact us at support@[PLACEHOLDER].com.
+              To exercise these rights, please contact us at Support@teachatbot.com.
             </p>
 
             <h2>7. Children&apos;s Privacy</h2>
@@ -160,7 +160,7 @@ export default function PrivacyPage() {
               If you have questions about this Privacy Policy, please contact us:
             </p>
             <ul>
-              <li>Email: support@[PLACEHOLDER].com</li>
+              <li>Email: Support@teachatbot.com</li>
               <li>Company: Tribe Industries Inc</li>
               <li>Location: Utah, USA</li>
             </ul>

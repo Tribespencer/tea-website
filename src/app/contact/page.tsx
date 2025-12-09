@@ -17,12 +17,26 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call - replace with actual form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: "", email: "", subject: "", message: "" });
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitted(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        alert('Failed to send message. Please try again or email us directly at Support@teachatbot.com');
+      }
+    } catch {
+      alert('Failed to send message. Please try again or email us directly at Support@teachatbot.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -247,7 +261,7 @@ export default function ContactPage() {
                       Email
                     </h3>
                     <p className="text-[var(--soft-gray)]">
-                      support@[PLACEHOLDER].com
+                      Support@teachatbot.com
                     </p>
                     <p className="text-sm text-[var(--soft-gray)] mt-1">
                       We&apos;ll respond within 24-48 hours

@@ -315,7 +315,7 @@ export default function TermsPage() {
               For questions about these Terms, please contact us:
             </p>
             <ul>
-              <li>Email: legal@[PLACEHOLDER].com</li>
+              <li>Email: Support@teachatbot.com</li>
               <li>Company: Tribe Industries Inc</li>
               <li>Location: Utah, USA</li>
             </ul>
