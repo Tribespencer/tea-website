@@ -7,7 +7,7 @@ export default function Footer() {
   const footerLinks = {
     product: [
       { href: "/features", label: "Features" },
-      { href: "/#waitlist", label: "Get Notified" },
+      { href: "https://apps.apple.com/us/app/tea-ai-chatbot/id6756167266", label: "Download", external: true },
     ],
     company: [
       { href: "/contact", label: "Contact" },
@@ -45,12 +45,19 @@ export default function Footer() {
               Your personal AI companion, beautifully designed for meaningful
               conversations whenever you need them.
             </p>
-            {/* App Store Badge Placeholder */}
-            <div className="flex items-center gap-3 opacity-50">
-              <div className="bg-[var(--charcoal)] text-white px-4 py-2 rounded-lg text-xs">
-                Coming Soon to App Store
-              </div>
-            </div>
+            {/* App Store Badge */}
+            <a
+              href="https://apps.apple.com/us/app/tea-ai-chatbot/id6756167266"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block transition-transform hover:scale-105"
+            >
+              <img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                className="h-10"
+              />
+            </a>
           </div>
 
           {/* Product Links */}
@@ -61,12 +68,23 @@ export default function Footer() {
             <ul className="space-y-3">
               {footerLinks.product.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-[var(--soft-gray)] hover:text-[var(--charcoal)] transition-colors text-sm"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[var(--soft-gray)] hover:text-[var(--charcoal)] transition-colors text-sm"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-[var(--soft-gray)] hover:text-[var(--charcoal)] transition-colors text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

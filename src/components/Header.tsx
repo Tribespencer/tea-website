@@ -68,9 +68,9 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link href="/#waitlist" className="btn-primary text-sm">
-              Get Notified
-            </Link>
+            <a href="https://apps.apple.com/us/app/tea-ai-chatbot/id6756167266" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm">
+              Download
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -134,13 +134,15 @@ export default function Header() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.4 }}
               >
-                <Link
-                  href="/#waitlist"
+                <a
+                  href="https://apps.apple.com/us/app/tea-ai-chatbot/id6756167266"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="btn-primary inline-block mt-4"
                 >
-                  Get Notified
-                </Link>
+                  Download
+                </a>
               </motion.div>
             </div>
           </motion.div>
